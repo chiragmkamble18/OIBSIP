@@ -1,12 +1,3 @@
-I see the issue — the README content you extracted from the image has **broken formatting** (missing newlines, incorrect indentation, malformed tables).  
-You already have the **proper Markdown version** in your message (the long one with ✅, tables, code blocks, etc.).  
-
-Below is the **final, polished README.md** that you should copy into your repository. It matches the structure you want and is ready to use.
-
----
-
-## 📄 Final README.md (copy this)
-
 ```markdown
 # Online Reservation System
 
@@ -41,30 +32,33 @@ This project was developed as part of the **Oasis Infobyte Internship Program (O
 
 ## 📂 Project Structure
 
-```
 OIBSIP/JavaDev-L2-OnlineReservationSystem/
+
 ├── src/
+
 │   └── com/reservation/
+
 │       ├── Main.java              // Entry point
+
 │       ├── DatabaseManager.java   // DB connection & operations
+
 │       ├── LoginUI.java           // Login window
+
 │       ├── MainMenuUI.java        // Main menu after login
+
 │       ├── Reservation.java       // Model class
+
 │       ├── ReservationUI.java     // Booking form
+
 │       └── CancellationUI.java    // Cancellation form
+
 ├── lib/
+
 │   ├── sqlite-jdbc-3.46.0.0.jar
+
 │   ├── slf4j-api-2.0.9.jar
+
 │   └── slf4j-simple-2.0.9.jar
-├── screenshots/                   (Add your screenshots here)
-│   ├── login.png
-│   ├── main-menu.png
-│   ├── booking-form.png
-│   ├── confirmation.png
-│   └── cancellation.png
-├── README.md
-└── .gitignore
-```
 
 ---
 
@@ -83,30 +77,12 @@ Place the required JAR files in the `lib/` folder:
 - `slf4j-api-2.0.9.jar` – [Download](https://repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar)  
 - `slf4j-simple-2.0.9.jar` – [Download](https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/2.0.9/slf4j-simple-2.0.9.jar)
 
-> **Alternative**: Use an older SQLite driver (e.g., `3.36.0.3`) which does **not** require SLF4J – you can then skip the two SLF4J JARs.
-
----
-
 ### Compilation
 
 Open a terminal/command prompt in the project root (`OIBSIP/JavaDev-L2-OnlineReservationSystem/`) and run:
 
 ```bash
 javac -cp ".;lib\sqlite-jdbc-3.46.0.0.jar;lib\slf4j-api-2.0.9.jar;lib\slf4j-simple-2.0.9.jar" src\com\reservation\*.java
-```
-
-> **Linux/macOS**: Use `:` instead of `;` and `/` for paths.
-
-### Execution
-
-```bash
-java -cp ".;lib\sqlite-jdbc-3.46.0.0.jar;lib\slf4j-api-2.0.9.jar;lib\slf4j-simple-2.0.9.jar;src" com.reservation.Main
-```
-
-If you see a native‑access warning, add the JVM flag:
-
-```bash
-java --enable-native-access=ALL-UNNAMED -cp ".;lib\sqlite-jdbc-3.46.0.0.jar;lib\slf4j-api-2.0.9.jar;lib\slf4j-simple-2.0.9.jar;src" com.reservation.Main
 ```
 
 ### First Run
@@ -148,37 +124,6 @@ On the first execution, the application automatically creates a `reservation.db`
 4. Click **Cancel Ticket** and confirm in the pop‑up.
 5. The booking is permanently removed from the database.
 
----
-
-## 📸 Screenshots
-
-Add your screenshots here (place them in the `screenshots/` folder and reference them):
-
-| Login | Main Menu |
-|-------|-----------|
-| ![Login](screenshots/login.png) | ![Main Menu](screenshots/main-menu.png) |
-
-| Booking Form | Confirmation |
-|--------------|--------------|
-| ![Booking Form](screenshots/booking-form.png) | ![Confirmation](screenshots/confirmation.png) |
-
-| Cancellation |
-|--------------|
-| ![Cancellation](screenshots/cancellation.png) |
-
----
-
-## 🧪 Troubleshooting
-
-| Error | Solution |
-|-------|----------|
-| `ClassNotFoundException: org.sqlite.JDBC` | Ensure the SQLite JAR is in the classpath and the filename matches. |
-| `ClassNotFoundException: org.slf4j.LoggerFactory` | Add the SLF4J JARs (api + simple) to the classpath, or use an older SQLite driver. |
-| `SQLITE_NOTADB: file is not a database` | Delete the existing `reservation.db` file and restart – it will create a fresh database. |
-| `No suitable driver found` | The `DatabaseManager` includes a static block to load the driver – ensure the JAR is present. |
-
----
-
 ## 📝 Additional Notes
 
 - The database file (`reservation.db`) is stored in the project root. You can inspect it with any SQLite browser.
@@ -202,14 +147,3 @@ This project is for educational purposes as part of the OIBSIP internship. Free 
 ---
 
 **Happy Coding!** 🚀
-```
-
----
-
-## ✅ Action Items
-
-1. **Copy the above content** into `OIBSIP/JavaDev-L2-OnlineReservationSystem/README.md`.
-2. **Add your screenshots** in the `screenshots/` folder and update the image paths if needed.
-3. **Commit and push** the final version.
-
-Now your README will be clean, well‑formatted, and professional – exactly as required. Good luck with your submission! 🎉
